@@ -31,3 +31,4 @@ RUN pecl install -o -f redis \
     && docker-php-ext-enable redis
 
 RUN chown -R www-data:www-data /var
+RUN chown www-data:www-data -R ./storage
