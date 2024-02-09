@@ -4,6 +4,8 @@ WORKDIR /var/www/html
 # Mod Rewrite
 RUN a2enmod rewrite
 
+RUN echo 'memory_limit = 2048M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini;
+
 # Linux Library
 RUN apt-get update -y && apt-get install -y \
     libicu-dev \
@@ -31,4 +33,4 @@ RUN pecl install -o -f redis \
     && docker-php-ext-enable redis
 
 RUN chown -R www-data:www-data /var
-RUN chown www-data:www-data -R ./storage
+#RUN chown www-data:www-data -R ./storage

@@ -1,26 +1,20 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@include('header')
 
-        <title>Laravel</title>
+        <section class="py-3 text-center container">
+            <div class="row py-lg-3">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Welcome to List of profiles, last updated:{{ $currentDate }}</h1>
+                    <p class="lead text-body-secondary">Visit every profile for more info by clicking on the corresponding card.</p>
+                </div>
+            </div>
+        </section>
 
+            <div class="container">
 
-    </head>
-    <body>
-        <div>
+                @include('visitCard')
 
-            <div class="container p-2 m-3">
-                @foreach ($users as $user)
-                    {{ $user->name }}
-                    <hr>
-                    <br>
-                @endforeach
             </div>
 
-            {{ $users->links() }}
+  @include('footer')
 
-        </div>
-    </body>
-</html>
+

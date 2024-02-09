@@ -7,6 +7,10 @@ services:
       - ./LaravelApp:/var/www/html
     ports:
       - 9000:80
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=1234
   
   mysql_db:
     image: mysql:8.0.27
@@ -27,6 +31,13 @@ services:
  # Redis Server
   redis:
       image: redis:alpine
-      command: redis-server --appendonly yes --requirepass  "${REDIS_PASSWORD}"
+      restart: always
       ports:
-          - 6379:6379
+            - "6379:6379"
+      command: redis-server --save 20 1 --loglevel warning --requirepass "1234"
+      volumes:
+        - cache:/data
+
+volumes:
+  cache:
+    driver: local

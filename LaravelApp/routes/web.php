@@ -14,4 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [Controller::class,'welcome']);
+Route::get('/', [Controller::class,'welcome'])->name('welcome');
+
+
+Route::get('/profile/{id}', [Controller::class,'profile'])->name('profile');
