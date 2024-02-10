@@ -5,6 +5,7 @@ WORKDIR /var/www/html
 RUN a2enmod rewrite
 
 RUN echo 'memory_limit = 2048M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini;
+RUN echo 'Timeout 600' >> /etc/apache2/apache2.conf;
 
 # Linux Library
 RUN apt-get update -y && apt-get install -y \
@@ -32,5 +33,4 @@ RUN pecl install -o -f redis \
     && rm -rf /tmp/pear \
     && docker-php-ext-enable redis
 
-RUN chown -R www-data:www-data /var
-#RUN chown www-data:www-data -R ./storage
+RUN chmod -R a+rwx /var/www/html

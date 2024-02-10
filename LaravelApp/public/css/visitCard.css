@@ -1,3 +1,14 @@
+
+
+.card:hover {
+    border: solid 1px #0d6efd;
+    background-color: #0d6dfd4f;
+    cursor: pointer;
+  }
+
+
+
+
 .card-columns {
     @include media-breakpoint-only(lg) {
       column-count: 4;
@@ -6,3 +17,5 @@
       column-count: 5;
     }
   }
+
+
