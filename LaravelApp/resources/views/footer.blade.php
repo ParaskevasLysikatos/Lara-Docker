@@ -1,6 +1,6 @@
 
 </main>
-<footer style="bottom:0;position: absolute;width: 100%;height: 50px;line-height: 50px;" class="footer mt-auto py-3">
+<footer style="bottom:0;position: absolute;width: 100%;height: 50px; background-color:rgba(135, 180, 222, 0.377)" class="footer mt-1 py-1">
     <div class="container-xl d-flex justify-content-center">
         <span class="text-body-secondary"> © 2024 Copyright:
             <a class="text-reset fw-bold" href="https://www.linkedin.com/in/paraskevas-lysikatos/">Lysikatos Paraskevas</a></span>

@@ -25,7 +25,7 @@
         </div>
     @endforeach
 
-
+    {{ $actors->links() }}
 </div>
 
-{{ $actors->links() }}
+

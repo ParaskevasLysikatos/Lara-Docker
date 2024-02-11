@@ -14,3 +14,9 @@ data:
 	docker exec laravel-docker bash -c "php artisan migrate:refresh --seed"
 cache:
 	docker exec laravel-docker bash -c "php artisan cache:clear"
+test-f:
+	docker exec laravel-docker bash -c "php artisan test --testsuite=Feature"
+test-u:
+	docker exec laravel-docker bash -c "php artisan test --testsuite=Unit"
+test:
+	docker exec laravel-docker bash -c "php artisan test"
