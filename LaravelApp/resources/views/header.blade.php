@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style=" position: relative;min-height: 100%;"class="h-100" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html  lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
@@ -31,5 +31,5 @@
     <title>Laravel-Aylo</title>
 </head>
 
-<body class="d-flex flex-column h-100">
+<body style=" position: relative;min-height: 100%;"class="d-flex flex-column h-100">
     <main class="flex-shrink-0">

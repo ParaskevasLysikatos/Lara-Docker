@@ -278,6 +278,13 @@ class Controller extends BaseController
 
     function cleanLocalFolder($path='servedImages')
     {
+        // check existance
+        $checkPath = public_path($path);
+        if (!File::exists($checkPath)) {
+        File::makeDirectory($checkPath);
+        }
+         // check existance end
+
         $folderPath = public_path($path);
 
         // Check if the folder exists before proceeding

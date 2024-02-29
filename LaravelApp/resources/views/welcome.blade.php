@@ -24,3 +24,12 @@
 </div>
 
 @include('footer')
+
+
+<script>
+    // JavaScript function to toggle the class of the image
+    function toggleBlur(id) {
+      var image = document.getElementById('#hoverCard').closest('img');
+      image.classList.toggle("blurred");
+    }
+  </script>
