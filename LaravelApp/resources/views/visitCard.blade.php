@@ -8,7 +8,8 @@
 
                     @if (count($a->thumbnail) > 0)
                         <img class="card-img-top" width="250" height="180"
-                            src="{{ asset('servedImages/' . $servedImages[$loop->index]) }}" />
+                            {{-- src="{{ asset('servedImages/' . $servedImages[$loop->index]) }}" /> --}}
+                            src="https://upload.wikimedia.org/wikipedia/en/a/a4/Hide_the_Pain_Harold_%28Andr%C3%A1s_Arat%C3%B3%29.jpg" />
                     @else
                         <img class="card-img-top" width="250" height="180" src="{{ asset('no-image.png') }}" />
                     @endif

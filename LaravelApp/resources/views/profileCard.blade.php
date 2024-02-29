@@ -7,8 +7,9 @@
             <div class="profile-img">
                 @if (count($actor->thumbnail) > 0)
                     <img width="250" height="350"
-                        src="{{ asset('servedImages/' . $actor->id . '_' . $actor->thumbnail[0]->type . '.jpg') }}" />
-                @else
+                        {{-- src="{{ asset('servedImages/' . $actor->id . '_' . $actor->thumbnail[0]->type . '.jpg') }}" /> --}}
+                        src="https://upload.wikimedia.org/wikipedia/en/a/a4/Hide_the_Pain_Harold_%28Andr%C3%A1s_Arat%C3%B3%29.jpg" />
+                    @else
                     <img width="250" height="350" src="{{ asset('no-image.png') }}" />
                 @endif
 
@@ -92,7 +93,8 @@
                         @foreach ($actor->thumbnail as $th)
                             <div class="column">
                                 <img width="{{ $th->width }}" height="{{ $th->height }}"
-                                    src="{{ asset('servedImages/' . $actor->id . '_' . $th->type . '.jpg') }}" />
+                                    {{-- src="{{ asset('servedImages/' . $actor->id . '_' . $th->type . '.jpg') }}" /> --}}
+                                    src="https://upload.wikimedia.org/wikipedia/en/a/a4/Hide_the_Pain_Harold_%28Andr%C3%A1s_Arat%C3%B3%29.jpg" />
                                 {{-- <img width="150" height="250" src="{{ $th->urls }}" /> --}}
                             </div>
                         @endforeach
@@ -115,9 +117,9 @@
     </div>
     <div class="row">
         <div class="col-md-4">
-            <div class="profile-work"> <p>PORNHUB LINK</p>
-                <a target="_blank" href="{{ $actor->link }}">Click here</a><br />
-            </div>
+            {{-- <div class="profile-work"> <p>PORNHUB LINK</p> --}}
+                {{-- <a target="_blank" href="{{ $actor->link }}">Click here</a><br /> --}}
+            {{-- </div> --}}
         </div>
 
     </div>
