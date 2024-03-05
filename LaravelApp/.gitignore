@@ -3,7 +3,7 @@
 /public/build
 /public/hot
 /public/storage
-/public/servedImages/*
+/public/servedImages/
 /storage/*.key
 /vendor
 .env.backup
