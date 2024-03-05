@@ -121,3 +121,8 @@ footer {
     clear: both;
   }
 
+  .blurred {
+    filter: blur(20px); /* You can adjust the blur amount as needed */
+  -webkit-filter: blur(20px);
+  }
+

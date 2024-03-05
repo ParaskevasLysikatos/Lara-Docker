@@ -11,11 +11,8 @@ use App\Classes\AttributeClass;
 use App\Classes\StatClass;
 use App\Classes\ThumbnailClass;
 use GuzzleHttp\Client;
-use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
-use Intervention\Image\ImageManager;
-use Intervention\Image\Drivers\Imagick\Driver;
 
 class Controller extends BaseController
 {
@@ -278,14 +275,13 @@ class Controller extends BaseController
 
     function cleanLocalFolder($path='servedImages')
     {
-        // check existance
-        $checkPath = public_path($path);
-        if (!File::exists($checkPath)) {
-        File::makeDirectory($checkPath);
-        }
+
          // check existance end
 
         $folderPath = public_path($path);
+        if (!File::exists($folderPath)) {
+            File::makeDirectory($folderPath);
+        }
 
         // Check if the folder exists before proceeding
         if (File::exists($folderPath)) {

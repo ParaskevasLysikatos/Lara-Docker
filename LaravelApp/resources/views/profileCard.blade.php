@@ -6,14 +6,16 @@
         <div class="col-md-4">
             <div class="profile-img">
                 @if (count($actor->thumbnail) > 0)
-                    <img width="250" height="350"
-                        {{-- src="{{ asset('servedImages/' . $actor->id . '_' . $actor->thumbnail[0]->type . '.jpg') }}" /> --}}
-                        src="https://upload.wikimedia.org/wikipedia/en/a/a4/Hide_the_Pain_Harold_%28Andr%C3%A1s_Arat%C3%B3%29.jpg" />
+                    <img width="250" class="blurred" height="350" id="{{$actor->id . '_' . $actor->thumbnail[0]->type . '.jpg' }}"
+                        src="{{ asset('servedImages/' . $actor->id . '_' . $actor->thumbnail[0]->type . '.jpg') }}" />
+                        {{-- src="https://upload.wikimedia.org/wikipedia/en/a/a4/Hide_the_Pain_Harold_%28Andr%C3%A1s_Arat%C3%B3%29.jpg" /> --}}
                     @else
                     <img width="250" height="350" src="{{ asset('no-image.png') }}" />
                 @endif
 
             </div>
+            <br>
+            <button style="margin-left: 35%;" class="btn btn-secondary" type="button" onclick="toggleBlur(`{{ $actor->id . '_' . $actor->thumbnail[0]->type . '.jpg'  }}`)">Toggle Blur</button>
         </div>
         <div class="col-md-6">
             <div class="profile-head">
@@ -135,5 +137,16 @@
 </footer>
 
 </body>
+
+<script>
+    // JavaScript function to toggle the class of the image
+    function toggleBlur(id) {
+        console.log(id);
+        var element = document.getElementById(id) ;
+        console.log(element.classList);
+        element.classList.toggle("blurred");
+      // console.log(element.classList);
+    }
+  </script>
 
 </html>
