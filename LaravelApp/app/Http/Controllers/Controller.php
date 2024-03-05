@@ -280,6 +280,10 @@ class Controller extends BaseController
     {
         $folderPath = public_path($path);
 
+        if (!file_exists($folderPath)){
+            File::makeDirectory($folderPath);
+        }
+
         // Check if the folder exists before proceeding
         if (File::exists($folderPath)) {
             // Delete all files within the folder
