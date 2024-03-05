@@ -13,7 +13,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-.env
 /public/build
 /public/hot
 /public/storage
