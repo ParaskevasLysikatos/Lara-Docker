@@ -13,6 +13,7 @@ use App\Classes\ThumbnailClass;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redis;
 
 class Controller extends BaseController
 {
