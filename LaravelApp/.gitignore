@@ -17,3 +17,4 @@ yarn-error.log
 /public/hot
 /public/storage
 /public/servedImages/
+.env
