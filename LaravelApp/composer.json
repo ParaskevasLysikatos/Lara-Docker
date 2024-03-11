@@ -12,7 +12,8 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
-        "predis/predis": "^2.2"
+        "predis/predis": "^2.2",
+        "ext-redis": "*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",

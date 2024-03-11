@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Str;
 
 return [
@@ -125,8 +124,8 @@ return [
         'client' => env('REDIS_CLIENT', 'phpredis'),
 
         'options' => [
-            'serializer' => Redis::SERIALIZER_MSGPACK,
-            'compression' => Redis::COMPRESSION_LZ4
+            'cluster' => env('REDIS_CLUSTER', 'redis'),
+            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
         ],
 
         'default' => [
